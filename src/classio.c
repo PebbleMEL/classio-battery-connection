@@ -61,8 +61,8 @@ static void init() {
   s_main_window = window_create();
   window_set_background_color(s_main_window, GColorBlack);
   window_set_window_handlers(s_main_window, (WindowHandlers) {
-    .load = main_window_load,	
-    .unload = main_window_unload,
+    .load = main_window_load,				// When window is pushed onto screen, e.g. app launch
+    .unload = main_window_unload,		// When window is popped off screen, e.g. app close
   });
   window_stack_push(s_main_window, true);
 }
